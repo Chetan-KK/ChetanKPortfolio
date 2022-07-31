@@ -1,0 +1,56 @@
+form {
+  flex-direction: column;
+}
+input,
+textarea {
+  margin: 1rem 0;
+  width: 30vw;
+  padding: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  border-bottom: 5px solid var(--secondary-color);
+  font-size: 1.5rem;
+  transition: 200ms;
+}
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  outline: none;
+  width: 32vw;
+}
+button {
+  cursor: pointer;
+  color: var(--text);
+  font-size: 2.5rem;
+  border: none;
+  margin-top: 2rem;
+  position: relative;
+  transition: 200ms;
+  font-family: var(--ff);
+  z-index: 2;
+  padding: 0.5rem 2rem 0.3rem 2rem;
+  position: relative;
+}
+button::after {
+  content: "";
+  background-color: var(--secondary-color);
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scaleY(0.1);
+  transform-origin: bottom;
+  transition: 200ms;
+}
+button:hover,
+button:focus {
+  outline: none;
+  color: var(--text-bg);
+}
+button:hover::after,
+button:focus::after {
+  transform: scaleY(1);
+}

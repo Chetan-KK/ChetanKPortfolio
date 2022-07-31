@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Poppins&family=Square+Peg&display=swap");
+:root {
+  --primary-color: #00b9ff;
+  --secondary-color: #0066ff;
+  --text: black;
+  --text-bg: white;
+  --background-color: gray;
+  --ff: "Bebas Neue", cursive;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--text-bg);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+}
+html {
+  scroll-behavior: smooth;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.top {
+  background-image: url(../static/navBg.svg), url(../static/navBg2.svg);
+  background-position: top;
+  background-size: cover;
+}
+.top .nav-bar {
+  height: 4rem;
+  padding: 20px;
+  justify-content: space-between;
+  font-family: var(--ff);
+}
+.top .nav-bar .logo {
+  color: var(--text-bg);
+  position: relative;
+  font-size: 3rem;
+  text-decoration: none;
+  transition: 200ms;
+}
+
+.top .nav-bar .logo::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  left: 0;
+  background-color: var(--text-bg);
+  transform-origin: left;
+  transition: transform 200ms;
+  transform: scaleX(0);
+  bottom: 3px;
+}
+.top .nav-bar .logo:hover::after {
+  transform-origin: right;
+  transform: scaleX(1);
+}
+.top .nav-bar .links .link {
+  color: var(--text);
+  /* text-decoration: none; */
+  font-size: 1.5rem;
+  position: relative;
+  transition: 200ms;
+  color: var(--text-bg);
+  z-index: 2;
+  padding: 0.5rem 2rem;
+}
+.top .nav-bar .links .active {
+  background-color: var(--text-bg);
+  color: var(--text);
+}
+.top .nav-bar .links .link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: var(--text-bg);
+  transform-origin: right;
+  transition: transform 200ms;
+  transform: scaleX(0);
+  z-index: -1;
+}
+.top .nav-bar .links .link:hover {
+  color: var(--text);
+}
+.top .nav-bar .links .link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.top .main-section {
+  height: calc(100vh - 4rem);
+  justify-content: center;
+  flex-direction: column;
+  font-family: var(--ff);
+}
+footer {
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-image: linear-gradient(
+    30deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  font-family: var(--ff);
+}
+footer .copyright {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: var(--text-bg);
+}
+footer .social-links .link {
+  margin: 0 0.5rem;
+  color: var(--text-bg);
+
+  font-size: 1.3rem;
+}
+footer .social-links .link:hover {
+  color: var(--secondary-color);
+  text-shadow: 0 0 10px var(--text-bg);
+}

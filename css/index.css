@@ -1,0 +1,170 @@
+.top .main-section .name {
+  font-size: 6rem;
+  transition: 200ms;
+  position: relative;
+  padding: 0 20px;
+  color: black;
+  text-decoration: none;
+}
+.top .main-section .name:hover {
+  color: var(--text-bg);
+}
+.top .main-section .name::before,
+.top .main-section .name::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: var(--secondary-color);
+  height: 10px;
+  left: 0;
+  transition: 200ms;
+  z-index: -1;
+}
+.top .main-section .name:hover::before,
+.top .main-section .name:hover::after {
+  height: 50%;
+}
+.top .main-section .name::before {
+  top: 0;
+}
+.top .main-section .name::after {
+  bottom: 13px;
+}
+.top .main-section .name:hover {
+  letter-spacing: 3px;
+}
+.top .main-section .quote {
+  font-size: 2rem;
+  letter-spacing: 0.7rem;
+  transition: 100ms;
+  position: relative;
+}
+.top .main-section .quote:hover {
+  letter-spacing: 0.8rem;
+}
+.about {
+  justify-content: space-around;
+  font-family: var(--ff);
+  position: relative;
+  margin: 3rem 0;
+}
+.main-title {
+  position: absolute;
+  font-family: var(--ff);
+  font-size: 15rem;
+  opacity: 30%;
+  left: 2rem;
+  transform: rotate(-10deg);
+  top: -5rem;
+}
+.about .left {
+  width: 40vw;
+}
+.about .left .title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.about .left p {
+  text-align: justify;
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+.about .left p::first-letter {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+.about img {
+  width: 30vw;
+  border-radius: 30px;
+}
+.projects {
+  padding-top: 10rem;
+  position: relative;
+}
+.projects .project {
+  justify-content: space-around;
+  position: relative;
+  margin: 4rem 0;
+}
+.projects .title {
+  transform: rotate(-3deg);
+  font-size: 4rem;
+  position: absolute;
+  color: var(--secondary-color);
+  top: -3rem;
+  left: 4rem;
+  font-family: var(--ff);
+}
+.projects .main-title {
+  left: 30rem;
+  transform: rotate(10deg);
+}
+.projects .project .desc {
+  width: 40vw;
+  text-align: justify;
+  font-size: 1.3rem;
+  font-family: var(--ff);
+}
+.projects .project .desc p::first-letter {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+.projects .project img {
+  width: 40vw;
+  transform: rotate(-10deg);
+  box-shadow: 10px 10px 30px -10px var(--text);
+  transition: 200ms;
+  opacity: 80%;
+  /* border: 5px solid var(--secondary-color); */
+}
+.projects .project img:hover {
+  box-shadow: 10px 10px 30px 0px var(--text);
+  transform: rotate(-6deg);
+  opacity: 100%;
+}
+.projects .project .middle {
+  transform: rotate(4deg);
+}
+.main-quote {
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 5rem 4rem;
+  font-weight: 600;
+  background-image: linear-gradient(
+    50deg,
+    var(--secondary-color),
+    rgb(255, 12, 194)
+  );
+  margin: 4rem 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /* box-shadow: ; */
+  font-family: "Square Peg", cursive;
+  position: relative;
+}
+.main-quote .main-title {
+  margin-top: 4rem;
+  transform: rotate(-15deg);
+  top: -4rem;
+  font-size: 4rem;
+  color: rgb(162, 0, 255);
+}
+.main-quote q {
+  text-align: center;
+  font-size: 3rem;
+}
+.main-quote p {
+  font-size: 2rem;
+}
+.contact {
+  justify-content: center;
+  position: relative;
+  padding: 5rem 0 5rem 0;
+}
+.contact form input,
+.contact form textarea {
+  width: 70vw;
+}
