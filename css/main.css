@@ -50,6 +50,7 @@ html {
 .top .nav-bar .logo::after {
   content: "";
   position: absolute;
+  border-radius: 100vw;
   height: 5px;
   width: 100%;
   left: 0;
@@ -65,7 +66,6 @@ html {
 }
 .top .nav-bar .links .link {
   color: var(--text);
-  /* text-decoration: none; */
   font-size: 1.5rem;
   position: relative;
   transition: 200ms;
@@ -127,4 +127,37 @@ footer .social-links .link {
 footer .social-links .link:hover {
   color: var(--secondary-color);
   text-shadow: 0 0 10px var(--text-bg);
+}
+@media screen and (max-width: 500px) {
+  .top {
+    background-size: 500%;
+    background-repeat: no-repeat;
+  }
+  .top .nav-bar {
+    padding: 0;
+    flex-direction: column;
+  }
+  .top .nav-bar .logo {
+    font-size: 2rem;
+    margin: 0.5rem;
+  }
+  .top .nav-bar .logo::after {
+    height: 3px;
+  }
+  .top .nav-bar .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .top .nav-bar .links .link {
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer .copyright {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
 }

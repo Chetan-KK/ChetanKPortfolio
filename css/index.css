@@ -60,10 +60,10 @@
 .about .left {
   width: 40vw;
 }
-.about .left .title {
+/* .about .left .title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-}
+} */
 .about .left p {
   text-align: justify;
   margin: 0.5rem 0;
@@ -116,7 +116,6 @@
   box-shadow: 10px 10px 30px -10px var(--text);
   transition: 200ms;
   opacity: 80%;
-  /* border: 5px solid var(--secondary-color); */
 }
 .projects .project img:hover {
   box-shadow: 10px 10px 30px 0px var(--text);
@@ -141,7 +140,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  /* box-shadow: ; */
   font-family: "Square Peg", cursive;
   position: relative;
 }
@@ -162,9 +160,115 @@
 .contact {
   justify-content: center;
   position: relative;
-  padding: 5rem 0 5rem 0;
+  padding: 5rem 0;
 }
 .contact form input,
 .contact form textarea {
   width: 70vw;
+}
+@media screen and (max-width: 500px) {
+  .top .main-section .name {
+    font-size: 3rem;
+  }
+  .top .main-section .name::before,
+  .top .main-section .name::after {
+    height: 5px;
+  }
+  .top .main-section .name::after {
+    bottom: 5px;
+  }
+  .top .main-section .quote {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+  }
+  .top .main-section .quote:hover {
+    letter-spacing: 0.4rem;
+  }
+  .about {
+    flex-direction: column;
+    margin: 0.5rem;
+  }
+  .main-title {
+    position: unset;
+    font-size: 5rem;
+    transform: none;
+    text-align: center;
+    top: 0;
+    left: 0;
+  }
+  .about .left {
+    width: 90%;
+  }
+  .about .left p {
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+  .about img {
+    width: 80vw;
+    margin-bottom: 7rem;
+    border-radius: 30px;
+  }
+  .projects {
+    padding-top: 0rem;
+  }
+  .projects .project {
+    flex-direction: column;
+    margin: 7rem 0;
+  }
+  .projects .main-title {
+    transform: none;
+    left: 0;
+    line-height: 0;
+  }
+  .projects .title {
+    left: 1rem;
+    font-size: 2rem;
+    transform: none;
+  }
+  .projects .project .desc {
+    width: 85vw;
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+  .projects .project .desc p::first-letter {
+    font-size: 2rem;
+  }
+  .projects .project img {
+    width: 80vw;
+    transform: none;
+  }
+  .projects .project img:hover {
+    box-shadow: 10px 10px 30px -20px var(--text);
+    transform: none;
+  }
+  .projects .project .middle {
+    transform: none;
+  }
+  .main-quote {
+    margin: 0;
+    align-items: center;
+    padding: 1rem;
+  }
+  .main-quote .main-title {
+    top: 0;
+    margin-top: 0;
+    font-size: 2rem;
+    transform: none;
+    margin: 2rem 0;
+  }
+  .main-quote q {
+    font-size: 2rem;
+  }
+  .main-quote p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  .contact {
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+  .contact form input,
+  .contact form textarea {
+    width: 85vw;
+  }
 }

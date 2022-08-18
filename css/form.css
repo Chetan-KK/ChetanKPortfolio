@@ -5,6 +5,7 @@ input,
 textarea {
   margin: 1rem 0;
   width: 30vw;
+  background-color: transparent;
   padding: 0.5rem;
   font-family: "Open Sans", sans-serif;
   border: none;
@@ -53,4 +54,25 @@ button:focus {
 button:hover::after,
 button:focus::after {
   transform: scaleY(1);
+}
+@media screen and (max-width: 500px) {
+  input,
+  textarea {
+    margin: 0.8rem 0;
+    width: 80vw;
+    padding: 0.1rem;
+    font-family: "Open Sans", sans-serif;
+    border: none;
+    border-bottom: 3px solid var(--secondary-color);
+    font-size: 1rem;
+  }
+  button {
+    font-size: 1.5rem;
+  }
+  input:hover,
+  input:focus,
+  textarea:hover,
+  textarea:focus {
+    width: 85vw;
+  }
 }
