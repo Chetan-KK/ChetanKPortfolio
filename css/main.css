@@ -14,6 +14,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+*::selection {
+  background-color: white;
+  color: red;
+}
 ::-webkit-scrollbar {
   width: 5px;
   background-color: var(--text-bg);
